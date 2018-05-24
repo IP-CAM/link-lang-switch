@@ -8,22 +8,22 @@
 
 
 	<file path="catalog/controller/common/header.php">
-	<operation>
-		<search ><![CDATA[$data['menu'] = $this->load->controller('common/menu');]]></search>
-		<add position="after"><![CDATA[$url_current = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-		if ($url_current == 'yourdomain.com/shop/en') {
-		// force english here
-		$this->session->data['language'] = 'en-gb';
-		$this->response->redirect($this->url->link('common/home'));
-		}
+		<operation>
+			<search ><![CDATA[$data['menu'] = $this->load->controller('common/menu');]]></search>
+			<add position="after"><![CDATA[$url_current = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+			if ($url_current == 'yourdomain.com/shop/en') {
+			// force english here
+			$this->session->data['language'] = 'en-gb';
+			$this->response->redirect($this->url->link('common/home'));
+			}
 
-		if ($url_current == 'yourdomain.com/shop/de') {
-		// force german here
-		$this->session->data['language'] = 'de-de';
-		$this->response->redirect($this->url->link('common/home'));
-		}
-		]]>
-		</add>
-	</operation>
+			if ($url_current == 'yourdomain.com/shop/de') {
+			// force german here
+			$this->session->data['language'] = 'de-de';
+			$this->response->redirect($this->url->link('common/home'));
+			}
+			]]>
+			</add>
+		</operation>
 	</file>
 </modification>
